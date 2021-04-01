@@ -55,7 +55,7 @@ function (err, result) {
         console.log("0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0");
         console.log("UNIQUE KEY Duplicate ERROR");
         console.log("0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0*0");
-        res.status(422).send('422 error');
+        res.status(422).send({ error: '422', message: 'this error is UNIQUE KEY Duplicate ERROR' });
       }
       throw err;
     }
